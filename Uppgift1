@@ -1,0 +1,36 @@
+// Question 1
+		
+/**
+ * Your specification goes here
+ */
+function red_rectangle_stream(s) {
+   
+    // your solution goes here
+    return stream_map(red, s);
+
+    
+}
+
+function red(s){
+    const height = 300;
+    const width = 400;
+        
+    for (let y = 0; y < height; y = y + 1) {
+        for (let x = 0; x < width; x = x + 1) {
+                    
+            if (s[y][x][0] === 255 && s[y][x][1] === 0 && s[y][x][2] === 0){
+                return [y, x];
+            
+                
+            }
+        }
+    }
+}
+
+
+    
+
+        
+
+head(red_rectangle_stream(anomaly_stream));
+// should evaluate to: [[141, 191], [159, 209]]
